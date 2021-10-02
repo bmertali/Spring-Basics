@@ -80,4 +80,15 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 	}
 
+
+	@Override
+	public int getCount() {
+		Session currentSession = sessionFactory.getCurrentSession();
+		Query countQuery = currentSession.createQuery(" count (*) from Customer");
+		int hold_count = countQuery.getResultList();
+		return hold_count;
+		
+		// select count (*) from table_name
+	}
+
 }

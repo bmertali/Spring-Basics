@@ -43,4 +43,10 @@ public class CustomerServiceImpl implements CustomerService {
 		
 	}
 
+
+	@Override
+	public int getCount() {
+		return customerDAO.getCount();
+	}
+
 }
